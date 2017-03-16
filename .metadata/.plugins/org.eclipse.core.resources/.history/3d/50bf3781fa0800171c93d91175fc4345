@@ -1,0 +1,53 @@
+
+// -----------------------------------------------------
+// Assignment #3
+// Part: 2
+// Written by: Olivier D'Angelo #26729916
+// -----------------------------------------------------
+
+import java.io.*;
+import java.util.Scanner;
+
+public class BookInventory2 extends Book {
+	Book[] bkArr;
+
+	public BookInventory2() {
+		bkArr = null;
+	}
+
+	public BookInventory2(Book[] bkArr) {
+		for (int i = 0; i < bkArr.length; i++) {
+			this.bkArr[i] = bkArr[i];
+		}
+	}
+
+	public static void addRecords(PrintWriter out) {
+
+	}
+
+	// Must use buffereader***
+	public static void displayFileContents(Scanner in) {
+
+	}
+
+	// returns ISBN bkArr index
+	public int binaryBookSearch(Book[] bkArr, int startIndex, int endIndex, long ISBN) {
+		return 1;
+	}
+
+	// increment index until ISBN is found. Increment counter for each
+	// iteration.
+	public static void sequentialBookSearch(Book[] bkArr, int startIndex, int endIndex, long ISBN) {
+		int iterationNum = 0;
+
+		for (int i = startIndex; i <= endIndex; i++) {
+			iterationNum++;
+			if (bkArr[i].ISBN == ISBN) {
+				System.out.println("ISBN has been found in inventory record # " + i
+						+ ".\n\nNumber of iterations to find solution: " + iterationNum);
+				break;
+			}
+		}
+		System.out.println("ISBN could not be found between record # " + startIndex + " and # " + endIndex + ".");
+	}
+}

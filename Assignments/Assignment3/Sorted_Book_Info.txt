@@ -1,0 +1,16 @@
+9345221 Programming_Methodologies Steve_A._Richmond 182.95 590
+200900210 Cellular_Communications Jones_Tomson 127.87 162
+238456239 Software_Engineering Alain_Macmillan 219.99 651
+345288666 C_# D._Smith 109.99 387
+465979798 From_Java_to_C++ Linda_Jackson 118.73 439
+524222444 Design_Pattern Jay_Franklin 122.15 217
+529086890 Database_Systems Peter_Jones_and_Jack_Lewis 157.87 862
+542087665 Pattern_Recognition Sam_Davis 212.59 328
+573428562 OO_Programming Frank_Raymond 182.25 439
+760098908 Microsoft_VC++ Garry_Wesley 165.2 416
+765867999 Visual_Basic Mary_Rosen 108.33 388
+800003243 VLSI Martha_Niclson 117.29 360
+843253432 Java_Applications_for_Programmers David_Wilson_and_Jack_Westman 173.25 672
+900876512 Networking_and_Data_Communications Pete_Jonson 229.25 724
+934214952 Core_Java Mike_Simon 129.99 568
+982138524 Coding_in_Delphi Nick_Hodges 49.99 321

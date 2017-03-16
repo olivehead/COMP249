@@ -1,0 +1,14 @@
+
+public class DuplicateISBNException extends Exception {
+	
+	public DuplicateISBNException() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public DuplicateISBNException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+	
+}

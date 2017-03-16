@@ -1,0 +1,17 @@
+
+public class DuplicateISBNException extends Exception {
+
+	public DuplicateISBNException() {
+		super("Duplicate ISBN found.");
+	}
+
+	public DuplicateISBNException(String message) {
+		super(message);
+
+	}
+
+	public DuplicateISBNException(long duplicateISBN, int recordNum) {
+		super("Duplicate ISBN " + duplicateISBN + " detected in record # " + recordNum
+				+ ".Please enter the correct ISBN:");
+	}
+}

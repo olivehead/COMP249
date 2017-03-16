@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class BookInventory2 extends Book {
+	Book[] bkArr;
+	
+	public BookInventory2() {
+		bkArr = null;
+	}
+	
+	public static void addRecords(PrintWriter out) {
+		
+	}
+	//Must use buffereader***
+	public static void displayFileContents(Scanner in) {
+		
+	}
+	//returns ISBN bkArr index
+	public int binaryBookSearch(Book[] bkArr, int startIndex, int end Index, long ISBN) {
+		return 1;
+	}
+	
+}

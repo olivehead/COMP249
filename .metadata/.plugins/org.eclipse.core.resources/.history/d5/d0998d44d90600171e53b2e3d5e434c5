@@ -1,0 +1,8 @@
+
+public class BookInventory1 extends Book {
+
+	public BookInventory1() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

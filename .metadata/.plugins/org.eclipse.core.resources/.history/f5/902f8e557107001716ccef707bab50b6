@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.Scanner;
+
+
+public class Driver {
+	
+	public static void fixInventory(Scanner inFileStreamName, PrintWriter OutFileStreamName) {
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		String userInput;
+		
+	}
+
+}

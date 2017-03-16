@@ -1,0 +1,179 @@
+
+// -----------------------------------------------------
+// Assignment #3
+// Part: 2
+// Written by: Olivier D'Angelo #26729916
+// -----------------------------------------------------
+
+import java.io.*;
+import java.util.Scanner;
+
+public class BookInventory2 extends Book {
+	private static Book[] bkArr;
+	private static int initialInventoryLength;
+	private static int binarySearchIterations = 0;
+
+	// Default constructor
+	public BookInventory2() {
+		bkArr = null;
+		initialInventoryLength = 0;
+	}
+
+	// Copy constructor
+	public BookInventory2(Book[] bkArr) {
+		initialInventoryLength = bkArr.length;
+		BookInventory2.bkArr = new Book[bkArr.length + 10];
+		for (int i = 0; i < bkArr.length; i++) {
+			BookInventory2.bkArr[i] = bkArr[i];
+		}
+
+	}
+
+	// Add a maximum of 10 new records
+	public static void addRecords(PrintWriter out) throws IOException {
+		Scanner kb = new Scanner(System.in);
+		int userInput;
+
+		// Check validity of user input (not extensively)
+		System.out.println("How many records do you wish to add?");
+		userInput = kb.nextInt();
+		while (userInput > 10 || userInput < 1) {
+			System.out.println("Number of new records must be between 1 and 10. Please input new value: ");
+			userInput = kb.nextInt();
+
+		}
+		BookInventory2 bi2 = new BookInventory2(BookInventory1.bkArr);
+
+		for (int i = 0; i < userInput; i++) {
+			long ISBN;
+			String title;
+			int issueYear;
+			String authorName;
+			double price;
+			int numberOfPages;
+			System.out.println("Record # " + (initialInventoryLength + i));
+			System.out.println("\nPlease provide the following information:");
+			System.out.print("ISBN: ");
+			ISBN = kb.nextLong();
+			// Compare ISBN of new Book entry with previous entry
+			while (ISBN <= bkArr[initialInventoryLength + i - 1].ISBN) {
+				System.out.println("\n\nError: ISBN must be greater than " 
+						+ bkArr[initialInventoryLength + i - 1].ISBN);
+				System.out.println("ISBN: ");
+			}
+			System.out.print("\nTitle: ");
+			title = kb.next();
+			System.out.print("\nYear issued: ");
+			issueYear = kb.nextInt();
+			System.out.print("\nAuthor's name: ");
+			authorName = kb.next();
+			System.out.print("\nPrice: ");
+			price = kb.nextDouble();
+			System.out.print("\nNumber of pages: ");
+			numberOfPages = kb.nextInt();
+
+			bkArr[initialInventoryLength + i] = new Book(ISBN, title, issueYear, authorName, price, numberOfPages);
+			out.println(bkArr[initialInventoryLength + i].ISBN + " " + bkArr[initialInventoryLength + i].title + " "
+					+ bkArr[initialInventoryLength + i].authorName + " " + bkArr[initialInventoryLength + i].price + " "
+					+ bkArr[initialInventoryLength + i].numberOfPages);
+		}
+		kb.close();
+		out.close();
+	}
+
+	public static void sortInventory(PrintWriter out) throws IOException {
+		// copy bkArr from BookInventory1:
+
+		quickSort(BookInventory1.bkArr, 0, BookInventory1.bkArr.length - 1);
+
+		for (int i = 0; i < BookInventory1.bkArr.length; i++) {
+			out.println(BookInventory1.bkArr[i].ISBN + " " + BookInventory1.bkArr[i].title + " "
+					+ BookInventory1.bkArr[i].authorName + " " + BookInventory1.bkArr[i].price + " "
+					+ BookInventory1.bkArr[i].numberOfPages);
+		}
+		out.close();
+	}
+
+	// Quicksort algorithm:
+	private static void quickSort(Book[] arr, int left, int right) {
+		int index = partition(arr, left, right);
+		if (left < index - 1)
+			quickSort(arr, left, index - 1);
+		if (index < right)
+			quickSort(arr, index, right);
+	}
+
+	private static int partition(Book[] arr, int left, int right) {
+		int i = left, j = right;
+		Book tmp;
+		long pivot = arr[(left + right) / 2].ISBN;
+
+		while (i <= j) {
+			while (arr[i].ISBN < pivot)
+				i++;
+			while (arr[j].ISBN > pivot)
+				j--;
+			if (i <= j) {
+				tmp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = tmp;
+				i++;
+				j--;
+			}
+		}
+		return i;
+	}
+
+	// Must use buffereader***
+	public static void displayFileContents(BufferedReader in) throws IOException {
+		String temp;
+
+		temp = in.readLine();
+		while (temp != null) {
+			System.out.println(temp);
+			temp = in.readLine();
+		}
+		in.close();
+	}
+
+	// returns ISBN bkArr index
+	public static int binaryBookSearch(Book[] bkArr, int startIndex, int endIndex, long ISBN) {
+		binarySearchIterations++;
+
+		int foundIndex = -1, mid;
+
+		if (startIndex > endIndex) {
+			System.out.println("Start index is greater than end index.");
+			return -1;
+		}
+		mid = (startIndex + endIndex) / 2;
+		if (bkArr[mid].ISBN == ISBN) {
+			System.out.println("ISBN has been found in inventory record # " + mid
+					+ ".\n\nNumber of iterations to find solution: " + binarySearchIterations);
+			return mid;
+		} else {
+			if (ISBN < bkArr[mid].ISBN) {
+				foundIndex = binaryBookSearch(bkArr, startIndex, mid - 1, ISBN);
+			} else {
+				foundIndex = binaryBookSearch(bkArr, mid + 1, endIndex, ISBN);
+			}
+		}
+		return foundIndex;
+	}
+
+	// increment index until ISBN is found. Increment counter for each
+	// iteration.
+	public static void sequentialBookSearch(Book[] bkArr, int startIndex, int endIndex, long ISBN) {
+		int iterationNum = 0;
+
+		for (int i = startIndex; i <= endIndex; i++) {
+			iterationNum++;
+			if (bkArr[i].ISBN == ISBN) {
+				System.out.println("ISBN has been found in inventory record # " + i
+						+ ".\n\nNumber of iterations to find solution: " + iterationNum);
+				break;
+			}
+		}
+		System.out.println("ISBN could not be found between record # " + startIndex + " and # " + endIndex + ".");
+	}
+}

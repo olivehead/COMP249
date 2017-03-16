@@ -1,0 +1,14 @@
+
+public class Book {
+	protected long ISBN;
+	protected String title;
+	protected int issueYear;
+	protected String authorName;
+	protected double price;
+	protected int numberOfPages;
+	
+	public Book() {
+		
+	}
+
+}

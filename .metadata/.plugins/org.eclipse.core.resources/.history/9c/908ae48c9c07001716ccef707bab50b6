@@ -1,0 +1,22 @@
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class BookInventory1 extends Book {
+	private static Book[] bkArr;
+
+	public BookInventory1() {
+
+	}
+
+	public static void fixInventory(Scanner inFileStream, PrintWriter OutFileStream) {
+
+	}
+
+	// Assumes an already open Input Stream
+	public static void displayFileContent(Scanner inFileStream) {
+
+		while (inFileStream.hasNextLine()) {
+			System.out.println();
+		}
+	}
+}

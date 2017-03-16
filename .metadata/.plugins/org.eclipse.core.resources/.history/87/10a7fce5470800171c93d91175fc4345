@@ -1,0 +1,37 @@
+
+public class Book {
+	protected long ISBN;
+	protected String title;
+	protected int issueYear;
+	protected String authorName;
+	protected double price;
+	protected int numberOfPages;
+
+	// Default
+	public Book() {
+		ISBN = 0;
+		title = null;
+		issueYear = 0;
+		authorName = null;
+		price = 0.0;
+		numberOfPages = 0;
+	}
+
+	// Construction which sets all attributes for a Book object
+	public Book(long ISBN, String title, int issueYear, String authorName, double price, int numberOfPages) {
+		this.ISBN = ISBN;
+		this.title = title;
+		this.issueYear = issueYear;
+		this.authorName = authorName;
+		this.price = price;
+		this.numberOfPages = numberOfPages;
+	}
+
+	// Compares 2 ISBN numbers
+	public boolean ISBNequals(Book newBook) {
+		if (newBook == null) {
+			return false;
+		}
+		return newBook.ISBN == this.ISBN;
+	}
+}

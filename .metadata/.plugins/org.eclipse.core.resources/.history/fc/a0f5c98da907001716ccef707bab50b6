@@ -1,0 +1,48 @@
+import java.io.PrintWriter;
+import java.util.Scanner;
+import java.io.FileNotFoundException;
+
+public class BookInventory1 extends Book {
+	private static Book[] bkArr;
+
+	public BookInventory1() {
+		bkArr = null;
+	}
+
+	// Create array of correct size and store all the info from input file into
+	// Book objects
+	public BookInventory1(Scanner inFileStream) throws FileNotFoundException {
+		String temp;
+		int i = 0;
+		while (inFileStream.hasNextLine()) {
+			temp = inFileStream.nextLine();
+			i++;
+		}
+		bkArr = new Book[i];
+		for (int j = 0; j < bkArr.length; j++) {
+
+		}
+	}
+
+	public static void fileCopy(Scanner inFileStream, PrintWriter outFileStream) throws FileNotFoundException {
+		String temp;
+		while (inFileStream.hasNextLine()) {
+			temp = inFileStream.nextLine();
+			outFileStream.println(temp);
+		}
+		inFileStream.close();
+		outFileStream.close();
+	}
+
+	public static void fixInventory(Scanner inFileStream, PrintWriter OutFileStream) {
+
+	}
+
+	// Assumes an already open Input Stream
+	public static void displayFileContent(Scanner inFileStream) throws FileNotFoundException {
+		while (inFileStream.hasNextLine()) {
+			System.out.println(inFileStream.nextLine());
+		}
+		inFileStream.close();
+	}
+}

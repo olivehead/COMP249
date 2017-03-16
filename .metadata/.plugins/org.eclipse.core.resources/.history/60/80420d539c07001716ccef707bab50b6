@@ -1,0 +1,8 @@
+
+public class BookInventory1 extends Book {
+	private static Book[] bkArr;
+	public BookInventory1() {
+		
+	}
+
+}

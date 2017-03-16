@@ -1,0 +1,15 @@
+import java.io.*;
+
+public class BookInventory2 extends Book {
+	Book[] bkArr;
+	
+	public BookInventory2() {
+		bkArr = null;
+	}
+	
+	public static void addRecords(PrintWriter out) {
+		
+	}
+	
+	
+}

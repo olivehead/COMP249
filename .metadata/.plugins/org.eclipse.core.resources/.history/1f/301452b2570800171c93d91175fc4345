@@ -1,0 +1,4 @@
+
+public class BookInventory2 extends Book {
+
+}

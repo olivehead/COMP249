@@ -1,0 +1,37 @@
+import java.util.Scanner;
+import java.io.ObjectInputStream;
+import java.io.FileInputStream;
+import java.io.ObjectOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.io.EOFException;
+import java.io.Serializable;
+
+public class Cars extends Vehicle implements Serializable {
+	String brand;
+	double price;
+	int seatNum;
+
+	public Cars() // default constructor
+	{
+		brand = "Honda";
+		price = 10000;
+		seatNum = 5;
+	}
+
+	public Cars(String b, double p, int ns) {
+		brand = b;
+		price = p;
+		seatNum = ns;
+	}
+	
+	public String getBrand() {
+		return brand;
+	}
+
+	public String toString() {
+		return "\nBrand:" + brand + "\nPrice" + price + "\nNumber of Seats:" + seatNum;
+	}
+
+}

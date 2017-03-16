@@ -1,0 +1,76 @@
+import java.io.PrintWriter;
+import java.util.Scanner;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class BookInventory1 extends Book {
+	private static Book[] bkArr;
+
+	public BookInventory1() {
+		bkArr = null;
+	}
+
+	// Create array of correct size and store all the info from input file into
+	// Book objects
+	public BookInventory1(Scanner inFileStream) throws IOException {
+		long ISBN;
+		String title, authorname, garbage;
+		int issueYear;
+		double price;
+		int numberOfPages;
+		bkArr = new Book[inventorySize(inFileStream)];
+		for (int i = 0; i < bkArr.length; i++) {
+			ISBN = inFileStream.nextLong();
+			title = inFileStream.next();
+			issueYear = inFileStream.nextInt();
+			authorname = inFileStream.next();
+			price = inFileStream.nextDouble();
+			numberOfPages = inFileStream.nextInt();
+			garbage = inFileStream.nextLine();
+			bkArr[i] = new Book(ISBN, title, issueYear, authorname, price, numberOfPages);
+		}
+	}
+
+	/*
+	 * Method returns inventory size
+	 */
+	private static int inventorySize(Scanner inFileStream) throws IOException {
+		String temp;
+		int size = 0;
+		while (inFileStream.hasNextLine()) {
+			temp = inFileStream.nextLine();
+			size++;
+		}
+		if (size <= 1) {
+			System.out.println("File  is empty or only contains one record");
+			System.out.println("Program will terminate.");
+			inFileStream.close();
+			System.exit(0);
+			return 1;
+		} else
+			return size;
+	}
+
+	public static void fileCopy(Scanner inFileStream, PrintWriter outFileStream) throws IOException {
+		String temp;
+		while (inFileStream.hasNextLine()) {
+			temp = inFileStream.nextLine();
+			outFileStream.println(temp);
+		}
+		inFileStream.close();
+		outFileStream.close();
+	}
+
+	public static void fixInventory(Scanner inFileStream, PrintWriter OutFileStream) throws IOException {
+		inventorySize(inFileStream);
+
+	}
+
+	// Assumes an already open Input Stream
+	public static void displayFileContent(Scanner inFileStream) throws FileNotFoundException {
+		while (inFileStream.hasNextLine()) {
+			System.out.println(inFileStream.nextLine());
+		}
+		inFileStream.close();
+	}
+}

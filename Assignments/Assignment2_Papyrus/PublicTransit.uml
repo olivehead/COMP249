@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_VtkSEPCnEea7G-MJLvCiGQ" name="PublicTransportation">
+  <packagedElement xmi:type="uml:Package" xmi:id="_ldQooPCoEea7G-MJLvCiGQ" name="Transit">
+    <packagedElement xmi:type="uml:Class" xmi:id="_H09RkPCpEea7G-MJLvCiGQ" name="PublicTransportation">
+      <ownedAttribute xmi:id="_Y0_7QPDiEea7G-MJLvCiGQ" name="ticketPrice" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_gY38YPDiEea7G-MJLvCiGQ" name="numStops" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_LddG0PDsEea7G-MJLvCiGQ" name="PublicTransportation"/>
+      <ownedOperation xmi:id="_MThzMPDsEea7G-MJLvCiGQ" name="PublicTransportation">
+        <ownedParameter xmi:id="_m-bIgPDsEea7G-MJLvCiGQ" name="ticketPrice">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_pTuzAPDsEea7G-MJLvCiGQ" name="numStops">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_QY_zwPDsEea7G-MJLvCiGQ" name="PublicTransportation">
+        <ownedParameter xmi:id="_5sFhgPDsEea7G-MJLvCiGQ" name="copy" type="_H09RkPCpEea7G-MJLvCiGQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KenqkPDtEea7G-MJLvCiGQ" name="toString">
+        <ownedParameter xmi:id="_r48FQPDtEea7G-MJLvCiGQ" name="info" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_UbOdoPDtEea7G-MJLvCiGQ" name="equals">
+        <ownedParameter xmi:id="_f2ltsPDtEea7G-MJLvCiGQ" name="publicTrans" type="_H09RkPCpEea7G-MJLvCiGQ"/>
+        <ownedParameter xmi:id="_yRhX8PDtEea7G-MJLvCiGQ" name="isEqual" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_iyXzQPD2EeaAGpTOaD2bKA" name="getTicketPrice">
+        <ownedParameter xmi:id="_rgn80PD2EeaAGpTOaD2bKA" name="ticketPrice" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_sbRAIPD2EeaAGpTOaD2bKA" name="setTicketPrice">
+        <ownedParameter xmi:id="_6p9TcPD2EeaAGpTOaD2bKA" name="newTicketPrice">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_7hcVEPD2EeaAGpTOaD2bKA" name="getNumStops">
+        <ownedParameter xmi:id="_-1QPMPD2EeaAGpTOaD2bKA" name="numStop" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="__aqpYPD2EeaAGpTOaD2bKA" name="setNumStop">
+        <ownedParameter xmi:id="_C3nRYPD3EeaAGpTOaD2bKA" name="NewNumStop">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_16pBEPCoEea7G-MJLvCiGQ" name="GroundTransit">
+    <packagedElement xmi:type="uml:Class" xmi:id="_UT-XAPCpEea7G-MJLvCiGQ" name="CityBus" visibility="package">
+      <generalization xmi:id="_pil1wPDpEea7G-MJLvCiGQ" general="_H09RkPCpEea7G-MJLvCiGQ"/>
+      <ownedAttribute xmi:id="_uxjSIPDiEea7G-MJLvCiGQ" name="routeNumber" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_xN1HUPDiEea7G-MJLvCiGQ" name="beginOperationYear" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_yc7XsPDiEea7G-MJLvCiGQ" name="lineName" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_yvpfYPDiEea7G-MJLvCiGQ" name="driverName" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Lpl0cPDjEea7G-MJLvCiGQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LtAU0PDjEea7G-MJLvCiGQ" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_t4oA4PD0EeaAGpTOaD2bKA" name="toString">
+        <ownedParameter xmi:id="_w-V0oPD0EeaAGpTOaD2bKA" name="info" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_x5z-YPD0EeaAGpTOaD2bKA" name="equals">
+        <ownedParameter xmi:id="_2CNXIPD0EeaAGpTOaD2bKA" name="cityBus" type="_UT-XAPCpEea7G-MJLvCiGQ"/>
+        <ownedParameter xmi:id="_8-xgoPD0EeaAGpTOaD2bKA" name="isEqual" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_qrdkgPD4EeaAGpTOaD2bKA" name="CityBus"/>
+      <ownedOperation xmi:id="_syXmoPD4EeaAGpTOaD2bKA" name="CityBus">
+        <ownedParameter xmi:id="_M4EXwPD5EeaAGpTOaD2bKA" name="price">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Pv4SYPD5EeaAGpTOaD2bKA" name="numStops">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_STRcMPD5EeaAGpTOaD2bKA" name="routeNum">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_VCbKEPD5EeaAGpTOaD2bKA" name="beginOperationYear">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WtKNkPD5EeaAGpTOaD2bKA" name="lineName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_YmiKAPD5EeaAGpTOaD2bKA" name="driverName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZcYM4PD5EeaAGpTOaD2bKA" name="CityBus">
+        <ownedParameter xmi:id="_ceUT4PD5EeaAGpTOaD2bKA" name="copy" type="_UT-XAPCpEea7G-MJLvCiGQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_rXdSYPD5EeaAGpTOaD2bKA" name="setRouteNumber" visibility="public"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VygxkPCpEea7G-MJLvCiGQ" name="Tram">
+      <generalization xmi:id="_hDd34PDqEea7G-MJLvCiGQ" general="_UT-XAPCpEea7G-MJLvCiGQ"/>
+      <ownedAttribute xmi:id="_PNbuoPDjEea7G-MJLvCiGQ" name="maxSpeed" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_KVHPoPD1EeaAGpTOaD2bKA" name="toString">
+        <ownedParameter xmi:id="_hcyV0PD1EeaAGpTOaD2bKA" name="info" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_K1TLkPD1EeaAGpTOaD2bKA" name="equals">
+        <ownedParameter xmi:id="_k0ss0PD1EeaAGpTOaD2bKA" name="tram" type="_VygxkPCpEea7G-MJLvCiGQ"/>
+        <ownedParameter xmi:id="_mv9foPD1EeaAGpTOaD2bKA" name="isEquals" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jWCA8PCpEea7G-MJLvCiGQ" name="Metro">
+      <generalization xmi:id="_gt3bUPDqEea7G-MJLvCiGQ" general="_UT-XAPCpEea7G-MJLvCiGQ"/>
+      <ownedAttribute xmi:id="_WyOVwPDjEea7G-MJLvCiGQ" name="numVehicles" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_XfK7UPDjEea7G-MJLvCiGQ" name="cityName" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_KBXNMPD1EeaAGpTOaD2bKA" name="toString">
+        <ownedParameter xmi:id="_VRvVQPD1EeaAGpTOaD2bKA" name="info" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Kl-9MPD1EeaAGpTOaD2bKA" name="equals">
+        <ownedParameter xmi:id="_bSNp8PD1EeaAGpTOaD2bKA" name="metro" visibility="public" type="_jWCA8PCpEea7G-MJLvCiGQ"/>
+        <ownedParameter xmi:id="_evMuMPD1EeaAGpTOaD2bKA" name="isEqual" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_42P2kPCoEea7G-MJLvCiGQ" name="MaritimeTransit">
+    <packagedElement xmi:type="uml:Class" xmi:id="_kypv8PCpEea7G-MJLvCiGQ" name="Ferry">
+      <generalization xmi:id="_s0-zkPDpEea7G-MJLvCiGQ" general="_H09RkPCpEea7G-MJLvCiGQ"/>
+      <ownedAttribute xmi:id="_on0eUPDjEea7G-MJLvCiGQ" name="buildYear" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_sCE-sPDjEea7G-MJLvCiGQ" name="shipName" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_om_SsPD1EeaAGpTOaD2bKA" name="toString">
+        <ownedParameter xmi:id="_8CFZcPD1EeaAGpTOaD2bKA" name="info" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_9LFo4PD1EeaAGpTOaD2bKA" name="equals">
+        <ownedParameter xmi:id="_AhwCsPD2EeaAGpTOaD2bKA" name="ferry" type="_kypv8PCpEea7G-MJLvCiGQ"/>
+        <ownedParameter xmi:id="_Cj4SgPD2EeaAGpTOaD2bKA" name="isEquals" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_DIzrgPCpEea7G-MJLvCiGQ" name="AirTransit">
+    <packagedElement xmi:type="uml:Class" xmi:id="_mcmwUPCpEea7G-MJLvCiGQ" name="Aircraft">
+      <generalization xmi:id="_qVfSUPDpEea7G-MJLvCiGQ" general="_H09RkPCpEea7G-MJLvCiGQ"/>
+      <ownedOperation xmi:id="_mNHOEPDxEeaAGpTOaD2bKA" name="toString">
+        <ownedParameter xmi:id="_yDZfkPDxEeaAGpTOaD2bKA" name="info" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ovN-cPDxEeaAGpTOaD2bKA" name="equals">
+        <ownedParameter xmi:id="_1frZMPDxEeaAGpTOaD2bKA" name="aircraft" type="_mcmwUPCpEea7G-MJLvCiGQ"/>
+        <ownedParameter xmi:id="_4pWf4PDxEeaAGpTOaD2bKA" name="isEqual" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_VD2YUPD3EeaAGpTOaD2bKA" name="setClassType">
+        <ownedParameter xmi:id="_eIUpgPD3EeaAGpTOaD2bKA" name="classType" type="_XU3ocPDmEea7G-MJLvCiGQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_rextQPD3EeaAGpTOaD2bKA" name="getClassType">
+        <ownedParameter xmi:id="_wOPtEPD3EeaAGpTOaD2bKA" name="classType" type="_XU3ocPDmEea7G-MJLvCiGQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="__PoooPD3EeaAGpTOaD2bKA" name="setMaintenanceType">
+        <ownedParameter xmi:id="_CG4ikPD4EeaAGpTOaD2bKA" name="maintenanceType" type="_dUawEPDmEea7G-MJLvCiGQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Eg8KMPD4EeaAGpTOaD2bKA" name="getMaintenanceType">
+        <ownedParameter xmi:id="_PP_t4PD4EeaAGpTOaD2bKA" name="maintenanceType" type="_dUawEPDmEea7G-MJLvCiGQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RjezcPD4EeaAGpTOaD2bKA" name="Aircraft"/>
+      <ownedOperation xmi:id="_TbL78PD4EeaAGpTOaD2bKA" name="Aircraft">
+        <ownedParameter xmi:id="_ZaucgPD4EeaAGpTOaD2bKA" name="aircraftType" type="_XU3ocPDmEea7G-MJLvCiGQ"/>
+        <ownedParameter xmi:id="_etNCwPD4EeaAGpTOaD2bKA" name="aircraftMaintenanceType" type="_dUawEPDmEea7G-MJLvCiGQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_fmYGcPD4EeaAGpTOaD2bKA" name="Aircraft">
+        <ownedParameter xmi:id="_kLt54PD4EeaAGpTOaD2bKA" name="copy" type="_mcmwUPCpEea7G-MJLvCiGQ"/>
+      </ownedOperation>
+      <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_XU3ocPDmEea7G-MJLvCiGQ" name="ClassType" visibility="private">
+        <ownedLiteral xmi:id="_UAClMPDnEea7G-MJLvCiGQ" name="Helicopter" visibility="private"/>
+        <ownedLiteral xmi:id="_VkokcPDnEea7G-MJLvCiGQ" name="Airline" visibility="private"/>
+        <ownedLiteral xmi:id="_XP_6EPDnEea7G-MJLvCiGQ" name="Glider" visibility="private"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_dUawEPDmEea7G-MJLvCiGQ" name="MaintenanceType" visibility="private">
+        <ownedLiteral xmi:id="_Zb0RYPDnEea7G-MJLvCiGQ" name="Weekly" visibility="private"/>
+        <ownedLiteral xmi:id="_ak4LMPDnEea7G-MJLvCiGQ" name="Monthly" visibility="private"/>
+        <ownedLiteral xmi:id="_bvXoYPDnEea7G-MJLvCiGQ" name="Yearly" visibility="private"/>
+      </nestedClassifier>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

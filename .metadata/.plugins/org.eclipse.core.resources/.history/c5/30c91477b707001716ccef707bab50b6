@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		// Create keyboard input stream
+		String userInput = null, inputFileName = "Initial_Book_Info.txt", outputFileName;
+		Scanner kb = new Scanner(System.in);
+
+		// Open output/input stream
+		Scanner in = null;
+		PrintWriter out = null;
+		// Ask user for file name until file name differs from original file
+		// name
+		while (userInput != inputFileName) {
+			System.out.println("Please enter a different file name for the corrected book inventory:");
+			userInput = kb.nextLine();
+		}
+		outputFileName = userInput;
+		try {
+			in = new Scanner(new FileInputStream("Initial_Book_Info.txt"));
+			out = new PrintWriter(new FileOutputStream(outputFileName));
+
+		} catch (FileNotFoundException e) {
+			System.out.println(inputFileName + " cannot be opened.");
+		}
+
+	}
+
+}

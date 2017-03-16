@@ -1,0 +1,50 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		// Create keyboard input stream
+		String inputFileName = "Initial_Book_Info.txt";
+		Scanner kb = new Scanner(System.in);
+		int inventorySize;
+		// Open output/input stream
+		Scanner in = null;
+		PrintWriter out = null;
+
+		System.out.println("Please enter a different file name for the corrected book inventory:");
+		// Use File Class to assure input file is not over written
+		File outputFileName = new File(kb.nextLine());
+		while (outputFileName.exists()) {
+			System.out.println("Error: There is an existing file called: " + inputFileName + ".");
+			System.out.println("That file already has a size of " + outputFileName.length() + " bytes.");
+			System.out.print("\nPlease enter another file name to copy to: ");
+			outputFileName = new File(kb.next());
+		}
+
+		// Open file I/O stream, catch File Not Found Exception
+		try {
+			in = new Scanner(new FileInputStream(inputFileName));
+			inventorySize = BookInventory1.inventorySize(in);
+			System.out.println("\nAmount of books in the inventory: " + inventorySize);
+			
+			in = new Scanner(new FileInputStream(inputFileName));
+			System.out.println("Inventory contents before modifications: ");
+			BookInventory1.displayFileContent(in);
+			
+			out = new PrintWriter(new FileOutputStream(outputFileName));
+			in = new Scanner(new FileInputStream(inputFileName));
+			try {
+			BookInventory1.fixInventory(in, out, inventorySize);
+			} catch (DuplicateISBNException e) {
+				System.out.println(e.getMessage());
+			}
+
+		} catch (FileNotFoundException e) {
+			System.out.println("Error: The following file cannot be found:" + inputFileName);
+		} catch (IOException e) {
+			System.out.println("Error reading " + inputFileName);
+		}
+	}
+
+}

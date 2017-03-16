@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;Diagram&apos; to &apos;org.eclipse.papyrus.javagen.Diagram/src/Diagram&apos;&#x0D;&#x0A;- Original project: &apos;org.eclipse.papyrus.javagen.Diagram&apos;&#x0D;&#x0A;- Destination element: &apos;org.eclipse.papyrus.javagen.Diagram/src/Diagram&apos;&#x0D;&#x0A;- Original element: &apos;org.eclipse.papyrus.javagen.Diagram/src/Diagram&apos;" description="Copy package" destination="/src&lt;Diagram" element1="/src&lt;Diagram" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1486603121595" version="1.0"/>
+</session>

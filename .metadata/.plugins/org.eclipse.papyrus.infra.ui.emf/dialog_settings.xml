@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__uml:Type:type">
+		<section name="History">
+			<list key="PreviousSelection">
+				<item value="platform:/resource/Assignment2_Papyrus/PublicTransit.uml#_UT-XAPCpEea7G-MJLvCiGQ"/>
+				<item value="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+				<item value="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+				<item value="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+				<item value="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+				<item value="platform:/resource/Assignment2_Papyrus/PublicTransit.uml#_mcmwUPCpEea7G-MJLvCiGQ"/>
+				<item value="platform:/resource/Assignment2_Papyrus/PublicTransit.uml#_dUawEPDmEea7G-MJLvCiGQ"/>
+				<item value="platform:/resource/Assignment2_Papyrus/PublicTransit.uml#_XU3ocPDmEea7G-MJLvCiGQ"/>
+				<item value="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+				<item value="platform:/resource/Assignment2_Papyrus/PublicTransit.uml#_kypv8PCpEea7G-MJLvCiGQ"/>
+				<item value="platform:/resource/Assignment2_Papyrus/PublicTransit.uml#_VygxkPCpEea7G-MJLvCiGQ"/>
+				<item value="platform:/resource/Assignment2_Papyrus/PublicTransit.uml#_jWCA8PCpEea7G-MJLvCiGQ"/>
+				<item value="platform:/resource/Assignment2_Papyrus/PublicTransit.uml#_H09RkPCpEea7G-MJLvCiGQ"/>
+			</list>
+		</section>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Assignment2/model.uml:uml:Type:type">
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Assignment2_Papyrus/PublicTransit.uml:uml:Constraint:bodyCondition">
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history_container_uml:Type:type">
+		<section name="History">
+			<list key="PreviousSelection">
+				<item value="platform:/resource/Assignment2_Papyrus/PublicTransit.uml#_VtkSEPCnEea7G-MJLvCiGQ"/>
+			</list>
+		</section>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.customizationManager">
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Assignment_2/model.uml:uml:Type:type">
+		<section name="History">
+			<list key="PreviousSelection">
+				<item value="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+				<item value="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+			</list>
+		</section>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Assignment2_Papyrus/PublicTransit.uml:uml:Type:type">
+		<section name="History">
+			<list key="PreviousSelection">
+				<item value="platform:/resource/Assignment2_Papyrus/PublicTransit.uml#_dUawEPDmEea7G-MJLvCiGQ"/>
+				<item value="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+				<item value="platform:/resource/Assignment2_Papyrus/PublicTransit.uml#_H09RkPCpEea7G-MJLvCiGQ"/>
+				<item value="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+				<item value="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+				<item value="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+				<item value="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+			</list>
+		</section>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/TEST1/TEST.uml:uml:Type:type">
+		<section name="History">
+			<list key="PreviousSelection">
+				<item value="platform:/resource/TEST1/TEST.uml#_7zgy8PDqEea7G-MJLvCiGQ"/>
+			</list>
+		</section>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Assignment2_Papyrus/PublicTransit.uml:uml:UseCase:useCase">
+	</section>
+</section>

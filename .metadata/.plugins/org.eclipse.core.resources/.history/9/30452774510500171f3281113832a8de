@@ -1,0 +1,34 @@
+import java.util.Scanner;
+import java.io.ObjectInputStream;
+import java.io.FileInputStream;
+import java.io.ObjectOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.io.EOFException;
+import java.io.Serializable;
+
+public class Motorcycles extends Vehicle implements Serializable{
+	String brand;
+	double price;
+	int modelYear;
+	public Motorcycles() {
+	brand = "Harley";
+	price = 103.022;
+	modelYear = 1997;
+	}
+	
+	public Motorcycles(String b, double p, int my) {
+		brand = b;
+		price = p;
+		modelYear = my;
+		}
+	
+	public String getBrand() {
+		return brand;
+	}
+	
+	public String toString() {
+		return "\nBrand:" + brand + "\nPrice" + price + "\nYear of Model:" + modelYear;
+	}	
+}
